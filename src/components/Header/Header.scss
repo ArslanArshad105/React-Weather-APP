@@ -1,0 +1,133 @@
+@import "../../styles/media-queries";
+@import "../../styles/variables";
+@import "../../styles/font-size";
+
+@include mobile-small-portrait {
+  .location {
+    grid-column: span 3;
+    grid-row: span 2;
+  }
+}
+@include mobile-small-landscape {
+  .location {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  .settings {
+    grid-column: 3 / span 2;
+  }
+  .search {
+    grid-column: 3 / span 2;
+  }
+}
+@include mobile-portrait {
+  .location {
+    grid-column: span 3;
+    grid-row: span 2;
+  }
+}
+@include mobile-landscape {
+  .location {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  .settings {
+    grid-column: 3 / span 2;
+  }
+  .search {
+    grid-column: 3 / span 2;
+  }
+}
+@include tablet-portrait {
+  .location {
+    grid-column: span 3;
+    grid-row: span 2;
+  }
+}
+@include tablet-landscape {
+  .location {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  .settings {
+    grid-column: 3 / span 2;
+  }
+  .search {
+    grid-column: 3 / span 2;
+  }
+}
+@include desktop {
+  .location {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  .settings {
+    grid-column: 3 / span 2;
+  }
+  .search {
+    grid-column: 3 / span 2;
+  }
+}
+.location {
+  display: flex;
+  flex-direction: column;
+  .city {
+color: var(--text);
+    font-family: "Frank Ruhl Libre", serif;
+    font-size: $headline2-font-size;
+    font-weight: 900;
+    margin-bottom: -5px;
+  }
+  .country {
+    color: var(--text);
+    font-family: "Barlow", sans-serif;
+    font-size: $subtitle1-font-size;
+    margin-bottom: 2px;
+  }
+  .date {
+    color: var(--text-secondary);
+    font-family: "Barlow", sans-serif;
+    font-size: $body2-font-size;
+  }
+}
+.settings {
+  display: flex;
+  justify-content: flex-end;
+  .units {
+    font-family: "Barlow", sans-serif;
+    font-size: $body2-font-size;
+    margin-top: 3px;
+    margin-right: 15px;
+    span {
+      color: var(--text-secondary);
+      cursor: pointer;
+      margin-right: 5px;
+      &.active {
+        color: var(--text);
+        font-weight: 600;
+      }
+    }
+  }
+  .button-theme {
+    color: var(--text);
+    font-size: $headline4-font-size;
+    cursor: pointer;
+  }
+}
+.search {
+  display: flex;
+  justify-content: flex-end;
+  .input {
+    background-color: transparent;
+    border: 0;
+    text-align: end;
+    font-size: $body2-font-size;
+    font-family: "Barlow", sans-serif;
+    width: 100%;
+    &:focus {
+      outline: none;
+    }
+    color: var(--text);
+    border-bottom: 1px solid var(--text);
+  }
+}

@@ -1,0 +1,77 @@
+@import "../../styles/media-queries";
+@import "../../styles/font-size";
+
+.current-weather {
+  @include mobile-small-portrait {
+    grid-column: span 4;
+    grid-row: 3;
+  }
+  @include mobile-small-landscape {
+    grid-column: span 2;
+    grid-row: 3;
+  }
+  @include mobile-portrait {
+    grid-column: span 4;
+    grid-row: 3;
+  }
+  @include mobile-landscape {
+    grid-column: span 2;
+    grid-row: 3;
+  }
+  @include tablet-portrait {
+    grid-column: span 4;
+    grid-row: 3;
+  }
+  @include tablet-landscape {
+    grid-column: span 2;
+    grid-row: 3;
+  }
+  @include desktop {
+    grid-column: span 2;
+    grid-row: 3;
+  }
+  display: flex;
+  justify-content: space-between;
+  .image {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    .icon {
+      width: 120px;
+    }
+  }
+  .details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    .temp {
+      color: var(--text);
+      font-family: "Frank Ruhl Libre", serif;
+      font-size: $headline0-font-size;
+      font-weight: 900;
+      margin-top: -10px;
+      margin-bottom: -15px;
+      letter-spacing: -3px;
+      span {
+        color: var(--text);
+        font-family: "Barlow", sans-serif;
+        font-size: $headline4-font-size;
+      }
+    }
+    .feelslike {
+    color: var(--text-secondary);
+      font-family: "Barlow", sans-serif;
+      font-size: $body2-font-size;
+      span {
+        color: var(--text);
+        font-size: $body2-font-size;
+      }
+    }
+    .description {
+    color: var(--text);
+      font-family: "Barlow", sans-serif;
+      font-size: $body2-font-size;
+    }
+  }
+}
