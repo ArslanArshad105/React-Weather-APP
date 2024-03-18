@@ -1,0 +1,62 @@
+@import "../../styles/media-queries";
+@import "../../styles/font-size";
+
+.daily {
+  @include mobile-small-portrait {
+    grid-column: span 4;
+    grid-row: 6;
+  }
+  @include mobile-small-landscape {
+    grid-column: span 4;
+    grid-row: 5;
+  }
+  @include mobile-portrait {
+    grid-column: span 4;
+    grid-row: 6;
+  }
+  @include mobile-landscape {
+    grid-column: span 4;
+    grid-row: 5;
+  }
+  @include tablet-portrait {
+    grid-column: span 4;
+    grid-row: 6;
+  }
+  @include tablet-landscape {
+    grid-column: span 4;
+    grid-row: 5;
+  }
+  @include desktop {
+    grid-column: span 4;
+    grid-row: 5;
+  }
+  display: flex;
+  flex-direction: column;
+  .title {
+    color: var(--text);
+    font-family: "Frank Ruhl Libre", serif;
+    font-size: $headline4-font-size;
+    font-weight: 700;
+    margin-bottom: -5px;
+  }
+  .daily-items-container {
+    margin-top: 10px;
+    .daily-item {
+      background-color: var(--background-card);
+      box-shadow: 0px 5px 10px 0px var(--color-shadow);
+      height: 40px;
+      margin: 5px;
+      border-radius: 15px;
+      transition: background-color 0.25s ease;
+    }
+    .daily-item-header {
+      height: 0;
+      transition: height 0.5s ease;
+      transform: 250ms;
+      overflow: hidden;
+      &.active {
+        height: 130px;
+      }
+    }
+  }
+}

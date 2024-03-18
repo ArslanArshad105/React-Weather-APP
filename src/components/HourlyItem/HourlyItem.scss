@@ -1,0 +1,21 @@
+@import "../../styles/font-size";
+
+.hourly-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-family: "Barlow", sans-serif;
+  font-size: $body2-font-size;
+  .hour {
+    cursor: inherit;
+  }
+  .icon-small {
+    width: 40px;
+    margin: 10px 0;
+  }
+  .temp {
+    cursor: inherit;
+  }
+}
